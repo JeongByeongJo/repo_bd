@@ -26,4 +26,8 @@ public class CommuneService {
 		return communeDao.selectList();
 	}
 	
+	public CommuneDto selectOne(CommuneDto communeDto) {
+		return communeDao.selectOne(communeDto);
+	}
+	
 }

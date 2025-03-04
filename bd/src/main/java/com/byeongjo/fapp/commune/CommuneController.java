@@ -32,5 +32,14 @@ public class CommuneController {
 		model.addAttribute("list", communeService.selectList());		
 		return "commune/communeXdmList";
 	}
+	
+	@RequestMapping(value = "/commune/communeXdmView") 
+	public String communeXdmView(Model model, CommuneDto communeDto) {
+		
+		System.out.println("communeDto.getSeq(): " + communeDto.getSeq());
+		
+		model.addAttribute("item", communeService.selectOne(communeDto));		
+		return "commune/communeXdmView";
+	}
 
 }

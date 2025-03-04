@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.byeongjo.fapp.address.AddressDao">
+
+	<resultMap type="com.byeongjo.fapp.address.AddressDto" id="resultMapObj"></resultMap>
+	
+	<select id="selectList" resultMap="resultMapObj">
+		select
+			seq
+		    ,isMain
+		    ,addressCategoty
+		    ,zip
+		    ,address
+		    ,addressBook_seq
+		from
+			address
+		where 1=1
+		ORDER BY seq asc
+		    ;
+	</select>
+	<select id="selectOne" resultMap="resultMapObj">
+		select
+			seq
+		    ,isMain
+		    ,addressCategoty
+		    ,zip
+		    ,address
+		    ,addressBook_seq
+		from
+			address
+		where 1=1
+			and seq = #{seq}
+		ORDER BY seq asc
+		    ;
+	</select>
+</mapper>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>isMain</td>
+		<td>addressCategoty</td>
+		<td>zip</td>
+		<td>address</td>
+		<td>addressBook_seq</td>
+	</tr>
+	<tr th:each ="list : ${list}">
+		<td th:text = "${list.seq}"></td>
+		<td th:text = "${list.isMain}"></td>
+		<td th:text = "${list.addressCategoty}"></td>
+		<td th:text = "${list.zip}"></td>
+		<td><a th:href = "@{/address/addressXdmView(seq=${list.seq})}"  th:text = "${list.address}"></a></td>		
+		<td th:text = "${list.addressBook_seq}"></td>		
+	</tr>
+</table>
+</body>
+</html>

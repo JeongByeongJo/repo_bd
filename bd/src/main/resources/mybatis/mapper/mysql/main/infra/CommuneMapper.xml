@@ -14,4 +14,17 @@
 		WHERE 1=1
 		ORDER BY seq DESC
 	</select>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			seq,
+		    commune
+		FROM
+			commune
+		WHERE 1=1
+			and seq = #{seq}
+		ORDER BY seq DESC
+		    ;
+	</select>	
+	
 </mapper>
