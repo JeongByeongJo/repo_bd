@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.byeongjo.fapp.commune.CommuneDao">
+<mapper namespace="com.byeongjo.fapp.company.CompanyDao">
 
-	<resultMap type="com.byeongjo.fapp.commune.CommuneDto" id="resultMapObj"></resultMap>
+	<resultMap type="com.byeongjo.fapp.company.CompanyDto" id="resultMapObj"></resultMap>
 	
 	<select id="selectList" resultMap="resultMapObj">
 		select
 			seq
-		    ,commune		    
+		    ,isMain
+		    ,company
+		    ,department
+		    ,positions
+		    ,addressBook_seq
 		from
-			commune
+			company
 		where 1=1
 		order by seq asc
 	</select>
@@ -18,12 +22,16 @@
 	<select id="selectOne" resultMap="resultMapObj">
 		select
 			seq
-		    ,commune
+		    ,isMain
+		    ,company
+		    ,department
+		    ,positions
+		    ,addressBook_seq
 		from
-			commune
+			company
 		where 1=1
 			and seq = #{seq}
 		order by seq asc
-	</select>
+	</select>	
 	
 </mapper>
