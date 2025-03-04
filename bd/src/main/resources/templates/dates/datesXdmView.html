@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>isMain</td>
+		<td>datesCategory</td>
+		<td>dates</td>
+		<td>isLunar</td>
+		<td>addressBook_seq</td>		
+	</tr>
+	<tr>
+		<td th:text = "${item.seq}"></td>
+		<td th:text = "${item.isMain}"></td>
+		<td th:text = "${item.datesCategory}"></td>
+		<td th:text = "${item.dates}"></td>
+		<td th:text = "${item.isLunar}"></td>
+		<td th:text = "${item.addressBook_seq}"></td>
+	</tr>
+</table>
+ 
+</body>
+</html>
