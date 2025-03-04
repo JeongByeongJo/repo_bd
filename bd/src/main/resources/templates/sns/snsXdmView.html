@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>seq</td>
+		<td>isMain</td>
+		<td>snsCategory</td>
+		<td>sns</td>
+		<td>addressBook_seq</td>
+	</tr>
+	<tr>
+		<td th:text = "${item.seq}"></td>
+		<td th:text = "${item.isMain}"></td>
+		<td th:text = "${item.snsCategory}"></td>
+		<td th:text = "${item.sns}"></td>
+		<td th:text = "${item.addressBook_seq}"></td>
+	</tr>
+</table>
+ 
+</body>
+</html>
