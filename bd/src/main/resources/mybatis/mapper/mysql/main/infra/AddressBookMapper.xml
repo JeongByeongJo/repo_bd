@@ -43,4 +43,21 @@
 			and seq = #{seq}
 		order by seq asc
 	</select>
+	<insert id="insert">
+		insert into addressbook (
+			lastName
+			,firstName
+			,nickname
+		    ,memo
+		) values (
+			#{lastName},
+			#{firstName},
+			#{nickname},
+			#{memo}
+		)			
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
 </mapper>

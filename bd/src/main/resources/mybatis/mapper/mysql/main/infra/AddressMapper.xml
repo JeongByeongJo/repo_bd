@@ -34,4 +34,22 @@
 		ORDER BY seq asc
 		    ;
 	</select>
+	<insert id="insert">
+		insert into address (
+			isMain
+		    ,addressCategoty
+		    ,zip
+		    ,address
+		    ,addressBook_seq
+		) values (
+			#{isMain},
+			#{addressCategoty},
+			#{zip},
+			#{address},
+			#{addressBook_seq}
+		)			
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 </mapper>

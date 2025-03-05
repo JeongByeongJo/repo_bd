@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form action="/telephone/telephoneXdmInst" method="post" id="form">
+	isMain: <input type="text" name="isMain" id="isMain">
+	telCategory: <input type="text" name="telCategory" id="telCategory">
+	telNum: <input type="text" name="telNum" id="telNum" placeholder="전화번호 입력">
+	addressBook_seq: <input type="text" name="addressBook_seq" id="addressBook_seq">
+	<button type="button" id="btnsave">저장</button>
+</form>
+<script type="text/javascript">
+
+	document.getElementById("btnsave").onclick = function() {
+		document.getElementById("form").submit();
+	}
+		
+</script>
+
+</body>
+</html>

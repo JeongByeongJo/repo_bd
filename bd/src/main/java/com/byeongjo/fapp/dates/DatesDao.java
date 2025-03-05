@@ -10,5 +10,7 @@ public interface DatesDao {
 	public List<DatesDto> selectList();
 	
 	public DatesDto selectOne(DatesDto datesDto);
+	
+	public int insert(DatesDto datesDto);
 
 }

@@ -24,4 +24,14 @@ public class AddressController {
 		return "address/addressXdmView";
 	}
 
+	@RequestMapping(value = "/address/addressXdmForm")
+	public String addressXdmForm() {		
+		return "address/addressXdmForm";
+	}
+	
+	@RequestMapping(value = "/address/addressXdmInst")
+	public String addressXdmInst(AddressDto addressDto) {
+		addressService.insert(addressDto);
+		return "redirect:/address/addressXdmList";
+	}
 }

@@ -29,5 +29,19 @@
 			and seq = #{seq}
 		order by seq asc
 	</select>
+	<insert id="insert">
+		insert into email (
+			isMain
+		    ,email
+		    ,addressBook_seq
+		) values (
+			#{isMain},
+			#{email},
+			#{addressBook_seq}
+		)			
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 	
 </mapper>

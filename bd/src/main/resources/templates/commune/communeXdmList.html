@@ -12,7 +12,9 @@
 	<tr th:each ="list : ${list}">
 		<td th:text = "${list.seq}"></td>
 		<td><a th:href="@{/commune/communeXdmView(seq=${list.seq})}" th:text="${list.commune}"></a></td>
-	</tr>
+	</tr>	
 </table>
+<a href="/commune/communeXdmForm">등록</a>
+<button><a href="/index">index</a></button>
 </body>
 </html>

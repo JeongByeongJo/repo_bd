@@ -31,5 +31,21 @@
 			and seq = #{seq}
 		order by seq asc
 	</select>
+	<insert id="insert">
+		insert into sns (
+			isMain
+		    ,snsCategory
+		    ,sns
+		    ,addressBook_seq
+		) values (
+			#{isMain},
+			#{snsCategory},
+			#{sns},
+			#{addressBook_seq}
+		)			
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
 	
 </mapper>

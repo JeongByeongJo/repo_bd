@@ -18,5 +18,9 @@ public class AddressService {
 	public AddressDto selectOne(AddressDto addressDto) {
 		return addressDao.selectOne(addressDto);		
 	}
+	
+	public int insert(AddressDto addressDto) {
+		return addressDao.insert(addressDto);
+	}
 
 }

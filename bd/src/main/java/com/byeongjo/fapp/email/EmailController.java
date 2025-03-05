@@ -23,5 +23,16 @@ public class EmailController {
 		model.addAttribute("item", emailService.selectOne(emailDto));
 		return "email/emailXdmView";
 	}
+	
+	@RequestMapping(value="/email/emailXdmForm")
+	public String emailXdmForm() {
+		return "email/emailXdmForm";
+	}
+	
+	@RequestMapping(value="/email/emailXdmInst")
+	public String emailXdmInst(EmailDto emailDto) {
+		emailService.insert(emailDto);
+		return "redirect:/email/emailXdmList";
+	}
 
 }

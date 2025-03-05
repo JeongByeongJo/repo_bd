@@ -10,4 +10,6 @@ public interface CompanyDao {
 	public List<CompanyDto> selectList();
 	
 	public CompanyDto selectOne(CompanyDto companyDto);
+	
+	public int insert(CompanyDto companyDto);
 }

@@ -12,5 +12,7 @@ public interface CommuneDao {
 		
 	public CommuneDto selectOne(CommuneDto communeDto);  // <- 추상메서드(내용이없다.)
 	
+	public int insert(CommuneDto communeDto); // <- 몇번 인서트 업데이트 델릭 했는지 횟수를 리턴한다
+	
 
 }

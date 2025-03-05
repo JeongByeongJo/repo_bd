@@ -23,5 +23,16 @@ public class DatesController {
 		model.addAttribute("item", datesService.selectOne(datesDto));
 		return "dates/datesXdmView";
 	}
+	
+	@RequestMapping(value="/dates/datesXdmForm")
+	public String datesXdmForm() {
+		return "dates/datesXdmForm";
+	}
+	
+	@RequestMapping(value="/dates/datesXdmInst")
+	public String datesXdmInst(DatesDto datesDto) {
+		datesService.insert(datesDto);
+		return "redirect:/dates/datesXdmList";
+	}
 
 }

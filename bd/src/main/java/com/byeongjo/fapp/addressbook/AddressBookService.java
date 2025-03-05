@@ -18,5 +18,9 @@ public class AddressBookService {
 	public AddressBookDto selectOne(AddressBookDto addressBookDto) {
 		return addressBookDao.selectOne(addressBookDto);
 	}
+	
+	public int insert(AddressBookDto addressBookDto) {
+		return addressBookDao.insert(addressBookDto);
+	}
 
 }

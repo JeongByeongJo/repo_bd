@@ -32,4 +32,21 @@
 		order by seq asc
 	</select>
 	
+	<insert id="insert">
+		insert into telephone (
+			isMain
+		    ,telCategory
+		    ,telNum
+		    ,addressBook_seq
+		) values (
+			#{isMain},
+			#{telCategory},
+			#{telNum},
+			#{addressBook_seq}
+		)			
+		<selectKey resultType="String" keyProperty="seq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
 </mapper>

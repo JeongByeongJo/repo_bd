@@ -23,5 +23,16 @@ public class AddressBookController {
 		model.addAttribute("item", addressBookService.selectOne(addressBookDto));
 		return "addressbook/addressbookXdmView";
 	}
+	
+	@RequestMapping(value = "/addressbook/addressbookXdmForm")
+	public String addressbookXdmForm() {
+		return "addressbook/addressbookXdmForm";
+	}
+	
+	@RequestMapping(value = "/addressbook/addressbookXdmInst")
+	public String addressbookXdmInst(AddressBookDto addressBookDto) {
+		addressBookService.insert(addressBookDto);
+		return "redirect:/addressbook/addressbookXdmList";
+	}
 
 }

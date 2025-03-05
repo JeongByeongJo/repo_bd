@@ -19,4 +19,7 @@ public class TelephoneService {
 		return telephoneDao.selectOne(telephoneDto);
 	}
 
+	public int insert(TelephoneDto telephoneDto) {
+		return telephoneDao.insert(telephoneDto);
+	}
 }

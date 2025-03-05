@@ -18,5 +18,9 @@ public class CompanyService {
 	public CompanyDto selectOne(CompanyDto companyDto) {
 		return companyDao.selectOne(companyDto);
 	}
+	
+	public int insert(CompanyDto companyDto) {
+		return companyDao.insert(companyDto);				
+	}
 
 }

@@ -30,4 +30,7 @@ public class CommuneService {
 		return communeDao.selectOne(communeDto);
 	}
 	
+	public int insert(CommuneDto communeDto) {
+		return communeDao.insert(communeDto);
+	}
 }

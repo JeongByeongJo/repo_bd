@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class CommuneController {
@@ -41,5 +44,20 @@ public class CommuneController {
 		model.addAttribute("item", communeService.selectOne(communeDto));		
 		return "commune/communeXdmView";
 	}
+	
+	@RequestMapping(value = "/commune/communeXdmForm")
+	public String communeXdmForm() {
+		return "commune/communeXdmForm";
+	}
+
+	@RequestMapping(value = "/commune/communeXdmInst")
+	public String communeXdmInst(CommuneDto communeDto) {
+		System.out.println("communeDto.getSeq(): " + communeDto.getSeq());
+		System.out.println("communeDto.getCommune(): " + communeDto.getCommune());		
+		communeService.insert(communeDto);
+		System.out.println("communeDto.getSeq(): " + communeDto.getSeq());
+		return "redirect:/commune/communeXdmList";
+	}
+	
 
 }

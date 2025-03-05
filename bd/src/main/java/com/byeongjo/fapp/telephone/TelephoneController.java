@@ -23,5 +23,16 @@ public class TelephoneController {
 		model.addAttribute("item", telephoneService.selectOne(telephoneDto));
 		return "telephone/telephoneXdmView";
 	}
+	
+	@RequestMapping(value="/telephone/telephoneXdmForm")
+	public String telephoneXdmForm() {
+		return "telephone/telephoneXdmForm";
+	}
+	
+	@RequestMapping(value="/telephone/telephoneXdmInst")
+	public String telephoneXdmInst(TelephoneDto telephoneDto) {
+		telephoneService.insert(telephoneDto);
+		return "redirect:/telephone/telephoneXdmList";
+	}
 
 }
