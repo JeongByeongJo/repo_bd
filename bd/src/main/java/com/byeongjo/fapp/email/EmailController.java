@@ -35,4 +35,16 @@ public class EmailController {
 		return "redirect:/email/emailXdmList";
 	}
 
+	@RequestMapping(value="/email/emailXdmMfom")
+	public String emailXdmMfom(Model model, EmailDto emailDto) {
+		model.addAttribute("item", emailService.selectOne(emailDto));
+		return "email/emailXdmMfom";
+	}
+	
+	@RequestMapping(value="/email/emailXdmUpdt")
+	public String emailXdmUpdt(EmailDto emailDto) {
+		emailService.update(emailDto);
+		return "redirect:/email/emailXdmList";
+	}
+	
 }

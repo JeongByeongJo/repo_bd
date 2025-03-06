@@ -22,4 +22,7 @@ public class TelephoneService {
 	public int insert(TelephoneDto telephoneDto) {
 		return telephoneDao.insert(telephoneDto);
 	}
+	public int update(TelephoneDto telephoneDto) {
+		return telephoneDao.update(telephoneDto);
+	}
 }

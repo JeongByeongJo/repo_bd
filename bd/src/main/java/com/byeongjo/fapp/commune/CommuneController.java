@@ -38,9 +38,6 @@ public class CommuneController {
 	
 	@RequestMapping(value = "/commune/communeXdmView") 
 	public String communeXdmView(Model model, CommuneDto communeDto) {
-		
-		System.out.println("communeDto.getSeq(): " + communeDto.getSeq());
-		
 		model.addAttribute("item", communeService.selectOne(communeDto));		
 		return "commune/communeXdmView";
 	}
@@ -52,12 +49,21 @@ public class CommuneController {
 
 	@RequestMapping(value = "/commune/communeXdmInst")
 	public String communeXdmInst(CommuneDto communeDto) {
-		System.out.println("communeDto.getSeq(): " + communeDto.getSeq());
-		System.out.println("communeDto.getCommune(): " + communeDto.getCommune());		
 		communeService.insert(communeDto);
 		System.out.println("communeDto.getSeq(): " + communeDto.getSeq());
 		return "redirect:/commune/communeXdmList";
 	}
 	
 
+	@RequestMapping(value = "/commune/communeXdmMFom")
+	public String communeXdmMFom(Model model, CommuneDto communeDto) {		
+		model.addAttribute("item", communeService.selectOne(communeDto));
+		return "commune/communeXdmMFom";
+	}
+	
+	@RequestMapping(value = "/commune/communeXdmUpdt")
+	public String communeXdmUpdt(CommuneDto communeDto) {				
+		communeService.update(communeDto);
+		return "redirect:/commune/communeXdmList";
+	}
 }

@@ -51,5 +51,15 @@
 		<selectKey resultType="String" keyProperty="seq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>
-	</insert>
+	</insert>	
+	<update id="update">
+		update address set
+			isMain = #{isMain}
+		    ,addressCategoty = #{addressCategoty}
+		    ,zip = #{zip}
+		    ,address = #{address}
+		    ,addressBook_seq = #{addressBook_seq}
+		 where
+		 	seq = #{seq}
+	</update>
 </mapper>

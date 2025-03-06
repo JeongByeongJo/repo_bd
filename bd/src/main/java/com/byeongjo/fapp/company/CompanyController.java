@@ -33,4 +33,16 @@ public class CompanyController {
 		companyService.insert(companyDto);
 		return "redirect:/company/companyXdmList";
 	}
+	
+	@RequestMapping(value = "/company/companyXdmMfom")
+	public String companyXdmMfom(Model model, CompanyDto companyDto) {
+		model.addAttribute("item", companyService.selectOne(companyDto));
+		return "company/companyXdmMfom";
+	}
+	
+	@RequestMapping(value = "/company/companyXdmUpdt")
+	public String companyXdmUpdt(CompanyDto companyDto) {
+		companyService.update(companyDto);
+		return "redirect:/company/companyXdmList";
+	}
 }

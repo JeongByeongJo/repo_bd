@@ -59,5 +59,13 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
-	
+	<update id="update">
+		update addressbook set
+			lastName = #{lastName}
+			,firstName = #{firstName}
+			,nickname = #{nickname}
+		    ,memo = #{memo}
+		where
+			seq = #{seq}
+	</update>
 </mapper>

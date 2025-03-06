@@ -34,4 +34,15 @@ public class AddressController {
 		addressService.insert(addressDto);
 		return "redirect:/address/addressXdmList";
 	}
+	@RequestMapping(value = "/address/addressXdmMfom")
+	public String addressXdmMfom(Model model, AddressDto addressDto) {
+		model.addAttribute("item", addressService.selectOne(addressDto));
+		return "address/addressXdmMfom";
+	}
+	
+	@RequestMapping(value = "/address/addressXdmUpdt")
+	public String addressXdmUpdt(AddressDto addressDto) {
+		addressService.update(addressDto);
+		return "redirect:/address/addressXdmList";
+	}
 }

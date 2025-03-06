@@ -34,5 +34,17 @@ public class TelephoneController {
 		telephoneService.insert(telephoneDto);
 		return "redirect:/telephone/telephoneXdmList";
 	}
+	
+	@RequestMapping(value="/telephone/telephoneXdmMfom")
+	public String telephoneXdmMfom(Model model, TelephoneDto telephoneDto) {
+		model.addAttribute("item", telephoneService.selectOne(telephoneDto));
+		return "telephone/telephoneXdmMfom";
+	}
+	
+	@RequestMapping(value="/telephone/telephoneXdmUpdt")
+	public String telephoneXdmUpdt(TelephoneDto telephoneDto) {
+		telephoneService.update(telephoneDto);
+		return "redirect:/telephone/telephoneXdmList";
+	}
 
 }

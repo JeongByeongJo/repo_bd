@@ -12,5 +12,6 @@ public interface DatesDao {
 	public DatesDto selectOne(DatesDto datesDto);
 	
 	public int insert(DatesDto datesDto);
+	public int update(DatesDto datesDto);
 
 }

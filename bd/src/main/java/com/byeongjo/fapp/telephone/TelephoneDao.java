@@ -12,5 +12,6 @@ public interface TelephoneDao {
 	public TelephoneDto selectOne(TelephoneDto telephoneDto);
 	
 	public int insert(TelephoneDto telephoneDto);
+	public int update(TelephoneDto telephoneDto);
 
 }

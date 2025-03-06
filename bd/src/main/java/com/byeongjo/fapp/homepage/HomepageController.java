@@ -33,4 +33,15 @@ public class HomepageController {
 		return "redirect:/homepage/homepageXdmList";
 	}
 
+	@RequestMapping(value="/homepage/homepageXdmMfom")
+	public String homepageXdmMfom(Model model, HomepageDto homepageDto) {
+		model.addAttribute("item", homepageService.selectOne(homepageDto));
+		return "homepage/homepageXdmMfom";
+	}
+	
+	@RequestMapping(value="/homepage/homepageXdmUpdt")
+	public String homepageXdmUpdt(HomepageDto homepageDto) {
+		homepageService.update(homepageDto);
+		return "redirect:/homepage/homepageXdmList";
+	}
 }

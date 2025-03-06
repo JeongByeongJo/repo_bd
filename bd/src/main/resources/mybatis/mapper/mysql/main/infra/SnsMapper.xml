@@ -47,5 +47,13 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
-	
+	<update id="update">
+		update sns set
+			isMain = #{isMain}
+		    ,snsCategory = #{snsCategory}
+		    ,sns = #{sns}
+		    ,addressBook_seq = #{addressBook_seq}
+	    where
+	    	seq = #{seq}
+	</update>
 </mapper>

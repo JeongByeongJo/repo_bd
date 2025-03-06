@@ -22,5 +22,8 @@ public class DatesService {
 	public int insert(DatesDto datesDto) {
 		return datesDao.insert(datesDto);
 	}
+	public int update(DatesDto datesDto) {
+		return datesDao.update(datesDto);
+	}
 
 }

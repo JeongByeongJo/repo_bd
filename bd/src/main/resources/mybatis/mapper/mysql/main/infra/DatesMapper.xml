@@ -53,4 +53,15 @@
 		</selectKey>
 	</insert>
 	
+	<update id="update">
+		update dates set
+			isMain = #{isMain}
+		    ,datesCategory = #{datesCategory}
+		    ,dates = #{dates}
+		    ,isLunar = #{isLunar}
+		    ,addressBook_seq = #{addressBook_seq}
+	    where
+	    	seq = #{seq}
+	</update>
+	
 </mapper>

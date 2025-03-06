@@ -48,5 +48,13 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
-	
+	<update id="update">
+		update telephone set
+			isMain = #{isMain}
+		    ,telCategory = #{telCategory}
+		    ,telNum = #{telNum}
+		    ,addressBook_seq = #{addressBook_seq}
+	    where
+	    	seq = #{seq}
+	</update>
 </mapper>

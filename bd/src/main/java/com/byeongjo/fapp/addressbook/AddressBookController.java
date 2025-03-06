@@ -35,4 +35,15 @@ public class AddressBookController {
 		return "redirect:/addressbook/addressbookXdmList";
 	}
 
+	@RequestMapping(value = "/addressbook/addressbookXdmMfom")
+	public String addressbookXdmMfom(Model model, AddressBookDto addressBookDto) {
+		model.addAttribute("item", addressBookService.selectOne(addressBookDto));
+		return "addressbook/addressbookXdmMfom";
+	}
+	
+	@RequestMapping(value = "/addressbook/addressbookXdmUpdt")
+	public String addressbookXdmUpdt(AddressBookDto addressBookDto) {
+		addressBookService.update(addressBookDto);
+		return "redirect:/addressbook/addressbookXdmList";
+	}
 }

@@ -20,6 +20,9 @@
 		<td th:text = "${item.addressBook_seq}"></td>
 	</tr>
 </table>
+<a href="/telephone/telephoneXdmList">목록</a>
+<a href="">삭제</a>
+<a th:href="@{/telephone/telephoneXdmMfom(seq=${item.seq})}">수정</a>
  
 </body>
 </html>

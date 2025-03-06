@@ -14,6 +14,10 @@
 		<td th:text = "${item.commune}"></td>
 	</tr>
 </table>
- 
+<tr>
+<tr>
+<a href="/commune/communeXdmList">목록</a>
+<a href="">삭제</a>
+<a th:href="@{/commune/communeXdmMFom(seq=${item.seq})}">수정</a>
 </body>
 </html>

@@ -43,5 +43,12 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
-	
+	<update id="update">
+		update email set
+			isMain = #{isMain}
+		    ,email = #{email}
+		    ,addressBook_seq = #{addressBook_seq}
+	    where
+	    	seq = #{seq}
+	</update>
 </mapper>

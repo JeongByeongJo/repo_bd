@@ -13,7 +13,7 @@
 		<td>addressBook_seq</td>
 	</tr>
 	<tr th:each ="list : ${list}">
-		<td th:text = "${list.seq}"></td>
+		<td><a th:href="@{/sns/snsXdmView(seq=${list.seq})}" th:text="${list.seq}"></a></td>
 		<td th:text = "${list.isMain}"></td>
 		<td th:text = "${list.snsCategory}"></td>
 		<td><a th:href="@{/sns/snsXdmView(seq=${list.seq})}" th:text="${list.sns}"></a></td>

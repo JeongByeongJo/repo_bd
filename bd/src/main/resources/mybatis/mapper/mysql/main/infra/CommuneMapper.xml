@@ -37,4 +37,11 @@
 		</selectKey>
 	</insert>
 	
+	<update id="update">
+		update commune set
+			commune = #{commune}
+		where 
+			seq = #{seq}
+	</update>
+	
 </mapper>

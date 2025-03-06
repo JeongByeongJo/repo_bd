@@ -22,5 +22,9 @@ public class AddressBookService {
 	public int insert(AddressBookDto addressBookDto) {
 		return addressBookDao.insert(addressBookDto);
 	}
+	
+	public int update(AddressBookDto addressBookDto) {
+		return addressBookDao.update(addressBookDto);
+	}
 
 }

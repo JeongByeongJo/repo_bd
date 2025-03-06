@@ -33,4 +33,8 @@ public class CommuneService {
 	public int insert(CommuneDto communeDto) {
 		return communeDao.insert(communeDto);
 	}
+	
+	public int update(CommuneDto communeDto) {
+		return communeDao.update(communeDto);
+	}
 }
