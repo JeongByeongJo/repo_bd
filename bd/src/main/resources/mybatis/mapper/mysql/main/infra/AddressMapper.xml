@@ -16,6 +16,7 @@
 		from
 			address
 		where 1=1
+			and delNy = 0
 		ORDER BY seq asc
 		    ;
 	</select>
@@ -61,5 +62,19 @@
 		    ,addressBook_seq = #{addressBook_seq}
 		 where
 		 	seq = #{seq}
+	</update>
+	
+	<delete id="delete">
+		delete from
+			address
+		where
+			seq = #{seq}
+	</delete>
+	
+	<update id="uelete">
+		update address set
+			delNy = 1
+		where
+			seq = #{seq}
 	</update>
 </mapper>

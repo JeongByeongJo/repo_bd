@@ -13,5 +13,7 @@ public interface DatesDao {
 	
 	public int insert(DatesDto datesDto);
 	public int update(DatesDto datesDto);
+	public int delete(DatesDto datesDto);
+	public int uelete(DatesDto datesDto);
 
 }

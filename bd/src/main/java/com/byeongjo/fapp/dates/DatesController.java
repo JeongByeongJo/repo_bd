@@ -46,5 +46,17 @@ public class DatesController {
 		datesService.update(datesDto);
 		return "redirect:/dates/datesXdmList";
 	}
+	
+	@RequestMapping(value="/dates/datesXdmDele")
+	public String datesXdmDele(DatesDto datesDto) {
+		datesService.delete(datesDto);
+		return "redirect:/dates/datesXdmList";
+	}
+	
+	@RequestMapping(value="/dates/datesXdmUele")
+	public String datesXdmUele(DatesDto datesDto) {
+		datesService.uelete(datesDto);
+		return "redirect:/dates/datesXdmList";
+	}
 
 }

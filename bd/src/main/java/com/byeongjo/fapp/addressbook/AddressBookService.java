@@ -26,5 +26,11 @@ public class AddressBookService {
 	public int update(AddressBookDto addressBookDto) {
 		return addressBookDao.update(addressBookDto);
 	}
+	public int delete(AddressBookDto addressBookDto) {
+		return addressBookDao.delete(addressBookDto);
+	}
+	public int uelete(AddressBookDto addressBookDto) {
+		return addressBookDao.uelete(addressBookDto);
+	}
 
 }

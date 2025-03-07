@@ -13,5 +13,7 @@ public interface TelephoneDao {
 	
 	public int insert(TelephoneDto telephoneDto);
 	public int update(TelephoneDto telephoneDto);
+	public int delete(TelephoneDto telephoneDto);
+	public int uelete(TelephoneDto telephoneDto);
 
 }

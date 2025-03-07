@@ -16,6 +16,7 @@
 		from
 			dates
 		where 1=1
+			and delNy = 0
 		order by seq asc
 	</select>
 	
@@ -63,5 +64,16 @@
 	    where
 	    	seq = #{seq}
 	</update>
-	
+	<delete id="delete">
+		delete from
+			dates
+		where
+			seq = #{seq}
+	</delete>
+	<update id="uelete">
+		update dates set
+			delNy = 1
+		where
+			seq = #{seq}
+	</update>
 </mapper>

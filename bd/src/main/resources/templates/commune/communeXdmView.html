@@ -17,7 +17,29 @@
 <tr>
 <tr>
 <a href="/commune/communeXdmList">목록</a>
-<a href="">삭제</a>
+<a th:href="@{/commune/communeXdmDele(seq=${item.seq})}" id="delete">삭제</a>
+<a th:href="@{/commune/communeXdmUele(seq=${item.seq})}" id="uelete">업제</a>
 <a th:href="@{/commune/communeXdmMFom(seq=${item.seq})}">수정</a>
+
+<script type="text/javascript">
+
+document.getElementById("uelete").onclick = function() {
+	if(confirm("정말로?")) {
+		// 확인을 누르면 여기로 오는데, 여기로 오면 해당 작업을 수행한다.(여기선 업제)
+	} else {
+		return false
+	}
+}
+
+document.getElementById("delete").onclick = function() {
+	if(confirm("정말로요?")) {
+		// 확인을 누르면 여기로 오는데, 여기로 오면 해당 작업을 수행한다.(여기선 업제)
+	} else {
+		// 아무것도 하지 않아도 된다.
+		return false
+	}
+}
+
+</script>
 </body>
 </html>

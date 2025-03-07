@@ -50,7 +50,6 @@ public class CommuneController {
 	@RequestMapping(value = "/commune/communeXdmInst")
 	public String communeXdmInst(CommuneDto communeDto) {
 		communeService.insert(communeDto);
-		System.out.println("communeDto.getSeq(): " + communeDto.getSeq());
 		return "redirect:/commune/communeXdmList";
 	}
 	
@@ -64,6 +63,18 @@ public class CommuneController {
 	@RequestMapping(value = "/commune/communeXdmUpdt")
 	public String communeXdmUpdt(CommuneDto communeDto) {				
 		communeService.update(communeDto);
+		return "redirect:/commune/communeXdmList";
+	}
+	
+	@RequestMapping(value = "/commune/communeXdmDele")
+	public String communeXdmDele(CommuneDto communeDto) {				
+		communeService.delete(communeDto);
+		return "redirect:/commune/communeXdmList";
+	}
+	
+	@RequestMapping(value = "/commune/communeXdmUele")
+	public String communeXdmUele(CommuneDto communeDto) {				
+		communeService.uelete(communeDto);
 		return "redirect:/commune/communeXdmList";
 	}
 }

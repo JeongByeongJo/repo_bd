@@ -12,5 +12,7 @@ public interface AddressDao {
 	
 	public int insert(AddressDto addressDto);
 	public int update(AddressDto addressDto);	
+	public int delete(AddressDto addressDto);	
+	public int uelete(AddressDto addressDto);	
 
 }

@@ -25,4 +25,10 @@ public class TelephoneService {
 	public int update(TelephoneDto telephoneDto) {
 		return telephoneDao.update(telephoneDto);
 	}
+	public int delete(TelephoneDto telephoneDto) {
+		return telephoneDao.delete(telephoneDto);
+	}
+	public int uelete(TelephoneDto telephoneDto) {
+		return telephoneDao.uelete(telephoneDto);
+	}
 }

@@ -15,6 +15,8 @@ public interface CommuneDao {
 	public int insert(CommuneDto communeDto); // <- 몇번 인서트 업데이트 델릭 했는지 횟수를 리턴한다
 	
 	public int update(CommuneDto communeDto); // <- 몇번 인서트 업데이트 델릭 했는지 횟수를 리턴한다
+	public int delete(CommuneDto communeDto); // <- 몇번 인서트 업데이트 델릭 했는지 횟수를 리턴한다
+	public int uelete(CommuneDto communeDto); // <- 몇번 인서트 업데이트 델릭 했는지 횟수를 리턴한다
 	
 
 }

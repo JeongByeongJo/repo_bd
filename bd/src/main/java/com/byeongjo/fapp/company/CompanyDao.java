@@ -13,4 +13,6 @@ public interface CompanyDao {
 	
 	public int insert(CompanyDto companyDto);
 	public int update(CompanyDto companyDto);
+	public int delete(CompanyDto companyDto);
+	public int uelete(CompanyDto companyDto);
 }

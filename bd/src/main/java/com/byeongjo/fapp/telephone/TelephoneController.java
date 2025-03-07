@@ -46,5 +46,17 @@ public class TelephoneController {
 		telephoneService.update(telephoneDto);
 		return "redirect:/telephone/telephoneXdmList";
 	}
+	
+	@RequestMapping(value="/telephone/telephoneXdmDele")
+	public String telephoneXdmDele(TelephoneDto telephoneDto) {
+		telephoneService.delete(telephoneDto);
+		return "redirect:/telephone/telephoneXdmList";
+	}
+	
+	@RequestMapping(value="/telephone/telephoneXdmUele")
+	public String telephoneXdmUele(TelephoneDto telephoneDto) {
+		telephoneService.uelete(telephoneDto);
+		return "redirect:/telephone/telephoneXdmList";
+	}
 
 }

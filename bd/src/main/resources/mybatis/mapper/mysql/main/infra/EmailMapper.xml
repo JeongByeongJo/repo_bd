@@ -14,6 +14,7 @@
 		from
 			email
 		where 1=1
+			and delNy = 0
 		order by seq asc
 	</select>
 	
@@ -50,5 +51,17 @@
 		    ,addressBook_seq = #{addressBook_seq}
 	    where
 	    	seq = #{seq}
+	</update>
+	<delete id="delete">
+		delete from
+			email
+		where
+			seq = #{seq}
+	</delete>
+	<update id="uelete">
+		update email set
+			delNy = 1
+		where
+			seq = #{seq}
 	</update>
 </mapper>

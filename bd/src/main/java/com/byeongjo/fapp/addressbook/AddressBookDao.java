@@ -11,5 +11,7 @@ public interface AddressBookDao {
 	public AddressBookDto selectOne(AddressBookDto addressBookDto);
 	public int insert(AddressBookDto addressBookDto);
 	public int update(AddressBookDto addressBookDto);
+	public int delete(AddressBookDto addressBookDto);
+	public int uelete(AddressBookDto addressBookDto);
 
 }

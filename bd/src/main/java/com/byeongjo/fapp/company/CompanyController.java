@@ -45,4 +45,16 @@ public class CompanyController {
 		companyService.update(companyDto);
 		return "redirect:/company/companyXdmList";
 	}
+	
+	@RequestMapping(value = "/company/companyXdmDele")
+	public String companyXdmDele(CompanyDto companyDto) {
+		companyService.delete(companyDto);
+		return "redirect:/company/companyXdmList";
+	}
+	
+	@RequestMapping(value = "/company/companyXdmUele")
+	public String companyXdmUele(CompanyDto companyDto) {
+		companyService.uelete(companyDto);
+		return "redirect:/company/companyXdmList";
+	}
 }

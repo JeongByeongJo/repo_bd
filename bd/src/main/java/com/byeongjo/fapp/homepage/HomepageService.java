@@ -25,5 +25,11 @@ public class HomepageService {
 	public int update(HomepageDto homepageDto) {
 		return homepageDao.update(homepageDto);
 	}
+	public int delete(HomepageDto homepageDto) {
+		return homepageDao.delete(homepageDto);
+	}
+	public int uelete(HomepageDto homepageDto) {
+		return homepageDao.uelete(homepageDto);
+	}
 
 }

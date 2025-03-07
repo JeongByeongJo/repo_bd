@@ -16,6 +16,7 @@
 		from
 			company
 		where 1=1
+			and delNy = 0
 		order by seq asc
 	</select>
 	
@@ -60,5 +61,17 @@
 		    ,addressBook_seq = #{addressBook_seq}
 	    where
 	    	seq = #{seq}
+	</update>
+	<delete id="delete">
+		delete from
+			company
+		where
+			seq = #{seq}
+	</delete>
+	<update id="uelete">
+		update company set
+			delNy = 1
+		where
+			seq = #{seq}
 	</update>
 </mapper>

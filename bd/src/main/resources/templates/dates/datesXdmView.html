@@ -23,8 +23,24 @@
 	</tr>
 </table>
 <a href="/dates/datesXdmList">목록</a>
-<a href="">삭제</a>
+<a th:href="@{/dates/datesXdmDele(seq=${item.seq})}" id="delete">삭제</a>
+<a th:href="@{/dates/datesXdmUele(seq=${item.seq})}" id="uelete">업제</a>
 <a th:href="@{/dates/datesXdmMfom(seq=${item.seq})}">수정</a>
- 
+<script type="text/javascript">
+document.getElementById("uelete").onclick = function() {
+	if(confirm("real?")) {
+		
+	} else {
+		return false
+	}
+}
+document.getElementById("delete").onclick = function() {
+	if(confirm("real?")) {
+		
+	} else {
+		return false
+	}
+}
+</script>
 </body>
 </html>

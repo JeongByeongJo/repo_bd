@@ -37,4 +37,11 @@ public class CommuneService {
 	public int update(CommuneDto communeDto) {
 		return communeDao.update(communeDto);
 	}
+	
+	public int delete(CommuneDto communeDto) {
+		return communeDao.delete(communeDto);
+	}
+	public int uelete(CommuneDto communeDto) {
+		return communeDao.uelete(communeDto);
+	}
 }

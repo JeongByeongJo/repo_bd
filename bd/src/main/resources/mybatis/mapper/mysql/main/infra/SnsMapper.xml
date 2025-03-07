@@ -15,6 +15,7 @@
 		from
 			sns
 		where 1=1
+			and delNy = 0
 		order by seq asc
 	</select>
 	
@@ -55,5 +56,17 @@
 		    ,addressBook_seq = #{addressBook_seq}
 	    where
 	    	seq = #{seq}
+	</update>
+	<delete id="delete">
+		delete from
+			sns
+		where
+			seq = #{seq}
+	</delete>
+	<update id="uelete">
+		update sns set
+			delNy = 1
+		where
+			seq = #{seq}
 	</update>
 </mapper>

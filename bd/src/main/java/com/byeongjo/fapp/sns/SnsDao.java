@@ -13,5 +13,7 @@ public interface SnsDao {
 	
 	public int insert(SnsDto snsDto);
 	public int update(SnsDto snsDto);
+	public int delete(SnsDto snsDto);
+	public int uelete(SnsDto snsDto);
 
 }

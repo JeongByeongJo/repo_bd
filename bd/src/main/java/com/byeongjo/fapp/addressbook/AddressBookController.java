@@ -46,4 +46,16 @@ public class AddressBookController {
 		addressBookService.update(addressBookDto);
 		return "redirect:/addressbook/addressbookXdmList";
 	}
+	
+	@RequestMapping(value = "/addressbook/addressbookXdmDele")
+	public String addressbookXdmDele(AddressBookDto addressBookDto) {
+		addressBookService.delete(addressBookDto);
+		return "redirect:/addressbook/addressbookXdmList";
+	}
+	
+	@RequestMapping(value = "/addressbook/addressbookXdmUele")
+	public String addressbookXdmUele(AddressBookDto addressBookDto) {
+		addressBookService.uelete(addressBookDto);
+		return "redirect:/addressbook/addressbookXdmList";
+	}
 }

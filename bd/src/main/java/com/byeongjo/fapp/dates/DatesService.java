@@ -25,5 +25,11 @@ public class DatesService {
 	public int update(DatesDto datesDto) {
 		return datesDao.update(datesDto);
 	}
+	public int delete(DatesDto datesDto) {
+		return datesDao.delete(datesDto);
+	}
+	public int uelete(DatesDto datesDto) {
+		return datesDao.uelete(datesDto);
+	}
 
 }

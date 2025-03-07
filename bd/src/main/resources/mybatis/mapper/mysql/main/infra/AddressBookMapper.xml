@@ -21,6 +21,7 @@
 		from
 			addressbook
 		where 1=1
+			and delNy = 0
 		order by seq asc
 	</select>
 	
@@ -65,6 +66,18 @@
 			,firstName = #{firstName}
 			,nickname = #{nickname}
 		    ,memo = #{memo}
+		where
+			seq = #{seq}
+	</update>
+	<delete id="delete">
+		delete from
+			addressbook
+		where
+			seq = #{seq}
+	</delete>
+	<update id="uelete">
+		update addressbook set
+			delNy = 1
 		where
 			seq = #{seq}
 	</update>
